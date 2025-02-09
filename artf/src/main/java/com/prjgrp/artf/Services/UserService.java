@@ -1,18 +1,29 @@
 package com.prjgrp.artf.Services;
 import com.prjgrp.artf.Entity.User;
+import com.prjgrp.artf.Repositories.UserRepo;
+
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class UserService 
 {
+    
+    private final UserRepo urepo;
+    @Autowired
+    public UserService(UserRepo urepo)
+    {
+        this.urepo = urepo;
+    }
+
+
+
     public List<User> getuserinfo()
     {
-        return List.of(
-           new User(1, "Carl", "carl@gmail.com", "carl@123")
-        );
+        return urepo.findAll();
     }
 
     
