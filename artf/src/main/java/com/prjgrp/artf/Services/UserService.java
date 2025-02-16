@@ -30,6 +30,15 @@ public class UserService
     {
         return urepo.saveAll(user);
     }
+    public List<User> updateuser(List<User> user)
+    {
+        return urepo.saveAll(user);
+    }
 
+    public void deluser(int uid)
+    {
+        urepo.deleteById(uid);
+        
+    }
     
 }
