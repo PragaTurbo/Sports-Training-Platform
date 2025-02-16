@@ -15,7 +15,7 @@ public class User
     public String username;
     public String usermail;
     public String userpass;
-    public int phoneno;
+    
 
     public User(int userId) {
         this.userId = userId;

@@ -26,5 +26,10 @@ public class UserService
         return urepo.findAll();
     }
 
+    public List<User> addusers(List<User> user)
+    {
+        return urepo.saveAll(user);
+    }
+
     
 }
