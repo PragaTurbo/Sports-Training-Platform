@@ -16,6 +16,8 @@ public class User
     public String usermail;
     public String userpass;
     
+    public User() {
+    }
 
     public User(int userId) {
         this.userId = userId;
@@ -29,8 +31,6 @@ public class User
         
     }
 
-    public User() {
-    }
     
     public int getUserId() {
         return userId;
