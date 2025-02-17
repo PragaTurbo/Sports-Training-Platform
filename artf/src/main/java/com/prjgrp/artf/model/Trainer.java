@@ -1,4 +1,4 @@
-package com.prjgrp.artf.Entity;
+package com.prjgrp.artf.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

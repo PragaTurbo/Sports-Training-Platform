@@ -1,4 +1,4 @@
-package com.prjgrp.artf.Controller;
+package com.prjgrp.artf.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
-
-import com.prjgrp.artf.Entity.User;
-import com.prjgrp.artf.Services.UserService;
+import com.prjgrp.artf.model.User;
+import com.prjgrp.artf.service.UserService;
 
 
 

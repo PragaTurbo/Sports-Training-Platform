@@ -1,6 +1,6 @@
-package com.prjgrp.artf.Services;
-import com.prjgrp.artf.Entity.User;
-import com.prjgrp.artf.Repositories.UserRepo;
+package com.prjgrp.artf.service;
+import com.prjgrp.artf.model.User;
+import com.prjgrp.artf.repository.UserRepo;
 
 import java.util.List;
 

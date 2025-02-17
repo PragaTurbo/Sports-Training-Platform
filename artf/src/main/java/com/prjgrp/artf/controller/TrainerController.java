@@ -1,4 +1,4 @@
-package com.prjgrp.artf.Controller;
+package com.prjgrp.artf.controller;
 
 public class TrainerController {
     
