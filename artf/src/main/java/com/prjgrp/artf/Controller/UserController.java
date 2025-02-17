@@ -34,6 +34,13 @@ public class UserController
         return uservice.getuserinfo();
     }
 
+    // @GetMapping("/get/uname/{username}")
+    // public List<User> getByUname(@PathVariable String username)
+    // {
+    //     return uservice.getByUname(username);
+
+    // }
+
     @PostMapping("/adduser")
     public List<User> addusers(@RequestBody List<User> user)
     {

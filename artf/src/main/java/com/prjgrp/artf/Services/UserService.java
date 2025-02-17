@@ -40,5 +40,9 @@ public class UserService
         urepo.deleteById(uid);
         
     }
+    // public List<User> getByUname(String username)
+    // {
+    //     return urepo.getByUname(username);
+    // }
     
 }
