@@ -1,37 +1,39 @@
 package com.prjgrp.artf.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
-public class User 
-{
+public class User {
     @Id
-    public int id;
-    public String username;
-    public String password;
-    public String firstName;
-    public String lastName;
-    public String phoneNumber;
-    public String address;
-    
-    // public String yogaclasses;
-    // public String instructionvideo; 
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(unique = true)
+    private String username;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+    private String address;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Trainer> trainers;
+
     public User() {
     }
 
-    
-
-    public User(int id) {
+    public User(int id, String username, String password, String firstName, String lastName, String phoneNumber, String address, List<Trainer> trainers) {
         this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.trainers = trainers;
     }
-
-
 
     public int getId() {
         return id;
@@ -89,10 +91,11 @@ public class User
         this.address = address;
     }
 
-    
+    public List<Trainer> getTrainers() {
+        return trainers;
+    }
 
-    
-    
-
-
+    public void setTrainers(List<Trainer> trainers) {
+        this.trainers = trainers;
+    }
 }
